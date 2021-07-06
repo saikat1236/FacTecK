@@ -2349,23 +2349,28 @@
             >
               <div class="featured-items">
                 <div class="featured-item cs item-0">
+                   <% articles.forEach(function(article,index){ %>
+
+                <% if ((typeof article.url=='object') || (typeof article.title=='object') || (typeof article.urlToImage=='object') || (typeof article.content=='object')){ %>
+                    <% } else{ %>
                   <a
                     class="featured-inner"
-                    href="https://litespot-templateify.blogspot.com/2020/07/opera-browser-lets-you-apply-dark-mode_30.html"
-                    title="Opera Browser Lets You Apply Dark Mode to Web Page"
-                    ><span class="entry-image-wrap before-mask is-image"
+                    href="<%- article.url %>"
+                    title= <%- article.title %>
+                    >
+                    <span class="entry-image-wrap before-mask is-image"
                       ><span
                         class="entry-thumb lazy-ify"
-                        data-image="https://1.bp.blogspot.com/-lNDLOkYVctM/XyMrR9hlGrI/AAAAAAAACb8/kfHY383L6UMezRamt-tByetKTlxgT05vQCLcBGAsYHQ/w72-h72-p-k-no-nu/ify12.jpg"
-                        style="
-                          background-image: url(https://1.bp.blogspot.com/-lNDLOkYVctM/XyMrR9hlGrI/AAAAAAAACb8/kfHY383L6UMezRamt-tByetKTlxgT05vQCLcBGAsYHQ/w373-h220-p-k-no-nu/ify12.jpg);
-                        "
+                        data-image="<%- article.urlToImage %>" alt="Image"
+                        style=" background-image: url(https://1.bp.blogspot.com/-lNDLOkYVctM/XyMrR9hlGrI/AAAAAAAACb8/kfHY383L6UMezRamt-tByetKTlxgT05vQCLcBGAsYHQ/w373-h220-p-k-no-nu/ify12.jpg)";
+                         
+                        
                       ></span
                     ></span>
                     <div class="entry-header entry-info">
                       <span class="entry-category">Apple</span>
                       <h2 class="entry-title">
-                        Opera Browser Lets You Apply Dark Mode to Web Page
+                        <%- article.title %>
                       </h2>
                       <div class="entry-meta">
                         <span class="entry-author mi"
