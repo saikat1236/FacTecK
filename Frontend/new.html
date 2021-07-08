@@ -2278,6 +2278,10 @@
             >
               <div class="ticker-items">
                 <div class="ticker-item item-0">
+                  <% articles.forEach(function(article,index){ %>
+
+                <% if ((typeof article.url=='object') || (typeof article.title=='object') || (typeof article.urlToImage=='object') || (typeof article.content=='object')){ %>
+                    <% } else{ %>
                   <h2 class="entry-title">
                     <a
                       href="/Frontend/news1.html"
@@ -2350,6 +2354,7 @@
             >
               <div class="featured-items">
                 <div class="featured-item cs item-0">
+             
                   <a
                     class="featured-inner"
                     href="/Frontend/news1.html"
@@ -2366,7 +2371,8 @@
                     <div class="entry-header entry-info">
                       <span class="entry-category">News</span>
                       <h2 class="entry-title">
-                        There will be the 1st latest news headline...
+                        <%- article.title %>
+                        <!-- There will be the 1st latest news headline... -->
                       </h2>
                       <div class="entry-meta">
                         <span class="entry-author mi"
@@ -2385,6 +2391,7 @@
                       </div>
                     </div></a
                   >
+              
                 </div>
                 <div class="featured-item cs item-1">
                   <a

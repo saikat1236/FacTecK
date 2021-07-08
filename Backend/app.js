@@ -11,7 +11,7 @@ app.set('view engine','ejs')
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/',require('./routes/news'))
 
-// app.set('views', './views')
-app.set("views", '../Frontend/tech-index');
+app.set('views', './views')
+// app.set("views", '../Frontend/new');
 
 app.listen(port,()=> console.log("started"))
