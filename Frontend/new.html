@@ -752,7 +752,7 @@
       .post-body a.colored-button{color:#fff}
       .post-body a.button:hover{background-color:var(--button-hover-bg);color:var(--button-hover-color)}
       .post-body a.colored-button:hover{background-color:var(--button-hover-bg)!important;color:var(--button-hover-color)!important}
-      .button:before{float:left;font-family:'Font Awesome 5 Free';font-weight:900;display:inline-block;margin:0 8px 0 0}
+      .button:before{float:none;font-family:'Font Awesome 5 Free';font-weight:900;display:inline-block;margin:0 8px 0 0}
       .rtl .button:before{float:right;margin:0 0 0 8px}
       .button.preview:before{content:'\f06e'}
       .button.download:before{content:'\f019'}
@@ -2278,6 +2278,10 @@
             >
               <div class="ticker-items">
                 <div class="ticker-item item-0">
+                  <% articles.forEach(function(article,index){ %>
+
+                <% if ((typeof article.url=='object') || (typeof article.title=='object') || (typeof article.urlToImage=='object') || (typeof article.content=='object')){ %>
+                    <% } else{ %>
                   <h2 class="entry-title">
                     <a
                       href="/Frontend/news1.html"
@@ -2350,6 +2354,7 @@
             >
               <div class="featured-items">
                 <div class="featured-item cs item-0">
+             
                   <a
                     class="featured-inner"
                     href="/Frontend/news1.html"
@@ -2366,7 +2371,8 @@
                     <div class="entry-header entry-info">
                       <span class="entry-category">News</span>
                       <h2 class="entry-title">
-                        Opera Browser Lets You Apply Dark Mode to Web Page
+                        <%- article.title %>
+                        <!-- There will be the 1st latest news headline... -->
                       </h2>
                       <div class="entry-meta">
                         <span class="entry-author mi"
@@ -2385,6 +2391,7 @@
                       </div>
                     </div></a
                   >
+              
                 </div>
                 <div class="featured-item cs item-1">
                   <a
@@ -2403,8 +2410,7 @@
                     <div class="entry-header entry-info">
                       <span class="entry-category">News</span>
                       <h2 class="entry-title">
-                        The 18 Practices for Building Responsive Web
-                        Applications
+                        There will be the 2nd latest news headline...
                       </h2>
                       <div class="entry-meta">
                         <span class="entry-author mi"
@@ -2441,7 +2447,7 @@
                     <div class="entry-header entry-info">
                       <span class="entry-category">News</span>
                       <h2 class="entry-title">
-                        11 of the Best Laptops Evaluated Based on Budget
+                        There will be the 3rd latest news headline...
                       </h2>
                       <div class="entry-meta">
                         <span class="entry-author mi"
@@ -4344,8 +4350,12 @@
         </div>
       </footer>
       <!-- Cookie Consent -->
+<<<<<<< HEAD
       <!--
       <div
+=======
+      <!-- <div
+>>>>>>> 634f398e225f24ab6efb6a10b47a0c9c77c79e8c
         id="litespot-pro-cookie-ify"
         class="is-visible"
         style="display: block"
@@ -4376,7 +4386,11 @@
           </div>
         </div>
       </div>
+<<<<<<< HEAD
     </div>       -->
+=======
+    </div> -->
+>>>>>>> 634f398e225f24ab6efb6a10b47a0c9c77c79e8c
     <!-- Mobile Menu and Back Top -->
     <div id="slide-menu">
       <div class="slide-menu-header">
@@ -5428,8 +5442,12 @@
         }
       }
     </style>
+<<<<<<< HEAD
     <!--
     <div class="demo-float">
+=======
+    <!-- <div class="demo-float">
+>>>>>>> 634f398e225f24ab6efb6a10b47a0c9c77c79e8c
       <span class="df-hide"><i class="fas fa-times"></i></span>
       <div class="df-logo"></div>
       <h3>Templateify</h3>
@@ -5439,7 +5457,11 @@
         title="LiteSpot Blogger Template"
         >Download This Template</a
       >
+<<<<<<< HEAD
     </div>   -->
+=======
+    </div> -->
+>>>>>>> 634f398e225f24ab6efb6a10b47a0c9c77c79e8c
     <script type="text/javascript">
       $(function () {
         $(".df-hide").on("click", function () {
