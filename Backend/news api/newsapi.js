@@ -3,7 +3,7 @@ console.log("This is my index js file");
 
 // Initialize the news api parameters
 let source = 'bbc-news';
-let apiKey = 'e1d06e3643b54454bd19d6d7015755b1';
+let apiKey = "89aeec7315fc418c8d84c2246035737c";
 
 // Grab the news container
 let newsAccordion = document.getElementById('newsAccordion');
