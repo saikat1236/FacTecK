@@ -13,4 +13,4 @@ To merge with main...
 1. push your current branch
 2. change branch to main branch 
 3. git merge that_branch_name (ex. git merge saikat)
-4. let me know in grp i'll merge in github using pull request 
+4. let me know in grp i'll merge in github using pull request. 
