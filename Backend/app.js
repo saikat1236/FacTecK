@@ -10,7 +10,6 @@ app.set('view engine','ejs')
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/',require('./routes/news'))
-app.use("/", require("./views/news1"));
 app.set('views', './views')
 // app.set("views", '../Frontend/new');
 
