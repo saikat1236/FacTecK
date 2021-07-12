@@ -2418,7 +2418,7 @@
                   <a
                     class="featured-inner"
                     href="/news2" target="_blank"
-                    title= "<%- article.title %>""
+                    title= "<%- article.title %>"
                     ><span class="entry-image-wrap before-mask is-image"
                       ><span
                         class="entry-thumb lazy-ify"
@@ -2452,7 +2452,7 @@
                     </div></a
                   >
                   <% } %>
-                        <% }) %> --> 
+                        <% }) %> 
                 </div>
                 <div class="featured-item cs item-2">
                   <a
@@ -2842,7 +2842,7 @@
                       <a class="wt-l" href="/search">View all</a>
                     </div>
                     <div class="blog-posts hfeed index-post-wrap">
-                      <article class="blog-post hentry index-post post-0">
+                      <!-- <article class="blog-post hentry index-post post-0">
                         <a
                           class="entry-image-wrap is-image"
                           href="https://litespot-templateify.blogspot.com/2020/07/opera-browser-lets-you-apply-dark-mode_30.html"
@@ -3122,7 +3122,30 @@
                             >
                           </div>
                         </div>
-                      </article>
+                      </article> -->
+                      
+            <% articles.forEach(function(article,index){ %>
+
+                <% if ((typeof article.url=='object') || (typeof article.title=='object') || (typeof article.urlToImage=='object') || (typeof article.content=='object')){ %>
+                    <% } else{ %>
+                        <a href="<%- article.url %>" target="_blank" class="news-box Hover-effect">
+
+                            <img src="<%- article.urlToImage %>" alt="Image">
+                            <h3>
+                                <%- article.title %>
+                            </h3>
+
+
+                            <p>
+                                <%- article.content %>
+                            </p>
+                            <br>
+                            <p style="margin-bottom: 0px; position: absolute; right: 0; bottom: 0; font-family: ui-monospace;">Updated: <span style="color:red;" ><%- new Date(article.publishedAt.slice(0,10)).toDateString() %>    <%- moment(article.publishedAt).format('hh : mm A');%> </span></p>
+
+
+                        </a>
+                        <% } %>
+                        <% }) %>
                     </div>
                   </div>
                   <div class="blog-pager" id="blog-pager">

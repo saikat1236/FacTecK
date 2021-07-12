@@ -11,6 +11,7 @@ app.set("view engine", "ejs");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/', require('./routes/news'))
+app.use("/", require("./routes/news1"));
 app.get("/news", (req, res) => {
   //   res.sendFile(path.join(__dirname, "/views/news1.ejs"));
   // res.send({ name: "GeeksforGeeks" });
