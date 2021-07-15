@@ -2288,10 +2288,7 @@
             >
               <div class="ticker-items">
                 <div class="ticker-item item-0">
-                  <% articles.forEach(function(article,index){ %>
-
-                <% if ((typeof article.url=='object') || (typeof article.title=='object') || (typeof article.urlToImage=='object') || (typeof article.content=='object')){ %>
-                    <% } else{ %>
+               
                   <h2 class="entry-title">
                     <a
                       href="/Frontend/news1.html"
@@ -2299,8 +2296,6 @@
                       >Opera Browser Lets You Apply Dark Mode to Web Page</a
                     >
                   </h2>
-                   <% } %>
-                        <% }) %>
                 </div>
                 <div class="ticker-item item-1">
                   <h2 class="entry-title">
@@ -2362,16 +2357,18 @@
           >
             <div
               class="widget-content"
-              <!-- data-shortcode="{getContent} $label={recent}" -->
+               <!-- data-shortcode="{getContent} $label={recent}"  -->
             >
               <div class="featured-items">
 
                 <div class="featured-item cs item-0">
-                  <% articles.forEach(function(article,index){ %>
+           
+                  <% top1_articles.forEach(function(article,index){ %>
 
                 <% if ((typeof article.url=='object') || (typeof article.title=='object') || (typeof article.urlToImage=='object') || (typeof article.content=='object')){ %>
-                    <% } else{ %>
-                  <a
+                    <% } 
+                    else{ %>
+                   <a
                     class="featured-inner"
                     href="/news1" target="_blank"
                     title="Opera Browser Lets You Apply Dark Mode to Web Page"
@@ -2386,9 +2383,10 @@
                     ></span>
                     <div class="entry-header entry-info">
                       <span class="entry-category">News</span>
-                      <h2 class="entry-title">
+                      <h2 class="entry-title"  id="myData">
+                       
                         <%- article.title %>
-                        <!-- There will be the 1st latest news headline... -->
+                         <!-- There will be the 1st latest news headline...  -->
                        </h2>
                       <div class="entry-meta">
                         <span class="entry-author mi"
@@ -2406,12 +2404,13 @@
                         >
                       </div>
                     </div></a
-                  >
+                  > 
                   <% } %>
                         <% }) %>
-                </div> 
+                    
+                </div>  
                  <div class="featured-item cs item-1">
-                    <% articles.forEach(function(article,index){ %>
+                    <% top2_articles.forEach(function(article,index){ %>
 
                 <% if ((typeof article.url=='object') || (typeof article.title=='object') || (typeof article.urlToImage=='object') || (typeof article.content=='object')){ %>
                     <% } else{ %>
@@ -2455,25 +2454,32 @@
                         <% }) %> 
                 </div>
                 <div class="featured-item cs item-2">
-                  <a
+           
+                  <% top3_articles.forEach(function(article,index){ %>
+
+                <% if ((typeof article.url=='object') || (typeof article.title=='object') || (typeof article.urlToImage=='object') || (typeof article.content=='object')){ %>
+                    <% } 
+                    else{ %>
+                   <a
                     class="featured-inner"
                     href="/news3" target="_blank"
-                    title="There will be the 3rd latest news headline..."
-                    >
-                    <span class="entry-image-wrap before-mask is-video"
+                    title="Opera Browser Lets You Apply Dark Mode to Web Page"
+                    ><span class="entry-image-wrap before-mask is-image"
                       ><span
                         class="entry-thumb lazy-ify"
-                        data-image="https://i.ytimg.com/vi/-FlxM_0S2lA/maxresdefault.jpg"
+                        data-image="https://1.bp.blogspot.com/-lNDLOkYVctM/XyMrR9hlGrI/AAAAAAAACb8/kfHY383L6UMezRamt-tByetKTlxgT05vQCLcBGAsYHQ/w72-h72-p-k-no-nu/ify12.jpg"
                         style="
-                          background-image: url(https://i.ytimg.com/vi/-FlxM_0S2lA/maxresdefault.jpg);
+                          background-image: url(https://1.bp.blogspot.com/-lNDLOkYVctM/XyMrR9hlGrI/AAAAAAAACb8/kfHY383L6UMezRamt-tByetKTlxgT05vQCLcBGAsYHQ/w373-h220-p-k-no-nu/ify12.jpg);
                         "
                       ></span
                     ></span>
                     <div class="entry-header entry-info">
                       <span class="entry-category">News</span>
-                      <h2 class="entry-title">
-                        There will be the 3rd latest news headline...
-                      </h2>
+                      <h2 class="entry-title"  id="myData">
+                       
+                        <%- article.title %>
+                         <!-- There will be the 3rd latest news headline...  -->
+                       </h2>
                       <div class="entry-meta">
                         <span class="entry-author mi"
                           ><span class="sp">by</span
@@ -2484,40 +2490,17 @@
                           ><span class="sp">•</span
                           ><time
                             class="published"
-                            datetime="2020-07-30T13:18:00.005-07:00"
+                            datetime="2020-07-30T13:19:00.011-07:00"
                             >July 30, 2020</time
                           ></span
                         >
                       </div>
                     </div></a
-                  >
-                        <!--<div class="news">
-
-             <% articles.forEach(function(article,index){ %>
-
-                <% if ((typeof article.url=='object') || (typeof article.title=='object') || (typeof article.urlToImage=='object') || (typeof article.content=='object')){ %>
-                    <% } else{ %>
-                        <a class="featured-inner"
-                        href="<%- article.url %>" target="_blank" class="news-box Hover-effect">
-
-                            <img src="<%- article.urlToImage %>" alt="Image">
-                            <h3>
-                                <%- article.title %>
-                            </h3>
-
-
-                             <p>
-                                <%- article.content %>
-                            </p> 
-                            <br>
-                            <p style="margin-bottom: 0px; position: absolute; right: 0; bottom: 0; font-family: ui-monospace;">Updated: <span style="color:red;" ><%- new Date(article.publishedAt.slice(0,10)).toDateString() %>    <%- moment(article.publishedAt).format('hh : mm A');%> </span></p>
-
-
-                        </a>
-                        <% } %>
+                  > 
+                  <% } %>
                         <% }) %>
-        </div> -->
-                
+                    
+                </div>  
                  </div> 
               </div>
             </div>
@@ -3124,7 +3107,7 @@
                         </div>
                       </article> -->
                       
-            <% articles.forEach(function(article,index){ %>
+            <% evr_articles.forEach(function(article,index){ %>
 
                 <% if ((typeof article.url=='object') || (typeof article.title=='object') || (typeof article.urlToImage=='object') || (typeof article.content=='object')){ %>
                     <% } else{ %>
@@ -6247,5 +6230,20 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript">
+$.ajax({
+    url: 'http://newsapi.org/v2/top-headlines?country=in&apiKey=89aeec7315fc418c8d84c2246035737c',
+    dataType: 'json',
+    success: function(data) {
+    
+            var row = $data.articles;
+            $('#myData').append(row);
+      
+    },
+    // error: function(jqXHR, textStatus, errorThrown){
+    //     alert('Error: ' + textStatus + ' - ' + errorThrown);
+    // }
+});
+</script>
   </body>
 </html>

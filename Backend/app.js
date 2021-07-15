@@ -10,8 +10,8 @@ app.use(express.static('public'))
 app.set("view engine", "ejs");
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use('/', require('./routes/news'))
-app.use("/", require("./routes/news1"));
+// app.use('/', require('./routes/news1'))
+app.use("/", require("./routes/news"));
 app.get("/news", (req, res) => {
   //   res.sendFile(path.join(__dirname, "/views/news1.ejs"));
   // res.send({ name: "GeeksforGeeks" });
@@ -30,4 +30,4 @@ app.get("/news3", (req, res) => {
 app.set('views', './views')
 // app.set("views", path.join(__dirname, "views"));
 // app.engine("html", require("ejs").renderFile);
-app.listen(port,()=> console.log("started"))
+app.listen(port, () => console.log("started"))
