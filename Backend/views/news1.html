@@ -10,12 +10,21 @@
   style="transform: none"
 >
   <head>
+       <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/style.css">
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
     <meta
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=yes"
       name="viewport"
     />
-    <title>The 18 Practices for Building Responsive Web Applications</title>
+    <title>There will be the 1st latest news headline...</title>
     <link href="//fonts.gstatic.com" rel="dns-prefetch" />
     <link href="//dnjs.cloudflare.com" rel="dns-prefetch" />
     <link href="//1.bp.blogspot.com" rel="dns-prefetch" />
@@ -2445,10 +2454,12 @@ google.setOnLoadCallback(load);
                         <div
                           class="entry-header blog-entry-header p-eh has-meta"
                         >
+
                           <nav id="breadcrumb">
+                             
                             <a
                               class="home"
-                              href="https://litespot-templateify.blogspot.com/"
+                              href="/news"
                               >Home</a
                             ><em class="delimiter"></em
                             ><a
@@ -2457,7 +2468,7 @@ google.setOnLoadCallback(load);
                               >Apple</a
                             >
                           </nav>
-                          <script type="application/ld+json">
+                          <!-- <script type="application/ld+json">
                             {
                               "@context": "http://schema.org",
                               "@type": "BreadcrumbList",
@@ -2482,10 +2493,17 @@ google.setOnLoadCallback(load);
                                 }
                               ]
                             }
-                          </script>
+                          </script> -->
+ <!-- <% articles.forEach(function(article,index){ %>
+
+                <% if ((typeof article.url=='object') || (typeof article.title=='object') || (typeof article.urlToImage=='object') || (typeof article.content=='object')){ %>
+                    <% } else{ %> -->
                           <h1 class="entry-title">
-                          There will be the 1st latest news...
+                            <%- article.title %>
+                          <!-- There will be the 1st latest news... -->
                           </h1>
+  <!-- <% } %>
+                        <% }) %> -->
                           <div class="entry-meta">
                             <div class="align-left">
                               <span class="entry-author mi"
@@ -2515,6 +2533,7 @@ google.setOnLoadCallback(load);
                               <span class="entry-comments-link show">0</span>
                             </div>
                           </div>
+                         
                         </div>
                         <div class="entry-content-wrap">
                           <div id="before-ad">
@@ -5625,5 +5644,8 @@ crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
  crossorigin="anonymous"></script>
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
