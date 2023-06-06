@@ -8,6 +8,10 @@ const math = require('math')
 newsr.get('/',async(req,res)=>{
     try {
       console.log("api working started");
+      // https://newsdata.io/api/1/news?apikey=pub_24116cd7ca0a107af9dfb87d2519355b514e5&q=pegasus&language=en
+      // https://newsdata.io/api/1/archive?apikey=pub_24116cd7ca0a107af9dfb87d2519355b514e5&q=metaverse
+      // https://newsdata.io/api/1/news?apikey=pub_24116cd7ca0a107af9dfb87d2519355b514e5&q=technology&country=in&language=en&category=technology 
+      // https://newsdata.io/api/1/news?apikey=pub_24116cd7ca0a107af9dfb87d2519355b514e5&q=ancient&country=in&category=politics 
       var top1_url = "http://newsapi.org/v2/top-headlines?country=in&apiKey=89aeec7315fc418c8d84c2246035737c";
       var top2_url = "http://newsapi.org/v2/top-headlines?sources=the-times-of-india&apiKey=89aeec7315fc418c8d84c2246035737c";
       var top3_url = "http://newsapi.org/v2/top-headlines?sources=google-news&apiKey=89aeec7315fc418c8d84c2246035737c";
